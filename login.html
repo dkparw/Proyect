@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SuitSQL: Login</title>
+    <link rel="stylesheet" href="css/login/sty.css">
+</head>
+<body>
+    <p id="login-status">Error</p>
+    <div class="container">
+        <div class="info">
+            <h1>Accede al Panel</h1>
+        </div>
+    </div>
+    <div class="form">
+        <div class="thumbnail"><img src="img/llave.png"/></div>
+        <form class="login-form">
+            <input type="text" id="user" class="maus" placeholder="username" autofocus required/>
+            <input type="password" id="pass" class="maus" placeholder="password" required/>
+            <input type="button" class="evn" class="maus" onclick="tr()" value="Entrar"></input>
+            <p class="message">No estas Registrado?<a href="#">Crea una cuenta</a></p>
+        </form>
+    </div>
+    <script>
+        function tr() {
+            const loginStatus = document.getElementById('login-status');
+            // nombre de usuario y contraseña
+            const validUsername = '1';
+            const validPassword = '1';
+            const username = document.getElementById('user').value;
+            const password = document.getElementById('pass').value;
+            if (username == validUsername && password == validPassword) {
+                loginStatus.textContent = 'Inicio de sesión exitoso';
+                loginStatus.style.background = 'green';
+                loginStatus.style.color = 'white';
+                window.location.href="admin-tom/adminlte/AdminLTE-master/index.html";
+            } else {
+                loginStatus.textContent = 'Credenciales incorrectas. Inténtalo de nuevo.';
+                loginStatus.style.background = 'red';
+                loginStatus.style.color = 'white';
+            }
+        };
+    </script>
+    <script>console.log("%c¡DETENTE!", "color: red; background:transparent; font-size: 60px; font-family:arial; text-align:center; word-spacing:70px; letter-spacing:400px;-webkit-text-stroke: 2px black;");
+        console.log("%cSi alguien te ha indicado que copiaras y pegaras algo aquí para habilitar una función o para 'hackear', es un 11/10 probable que sea una estafa para acceder a tu cuenta. https://es.wikipedia.org/wiki/Self-XSS","font-size:15px; font-family:arial;");
+    </script>
+</body>
+</html>

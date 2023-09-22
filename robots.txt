@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /admin-tom/
+Disallow: Mante.html
+Disallow: .htaccess
